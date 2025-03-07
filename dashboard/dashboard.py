@@ -7,8 +7,8 @@ from matplotlib.legend_handler import HandlerLine2D
 sns.set(style='darkgrid')  # styling profesional
 
 # Load data yang telah dibersihkan dari file notebook.ipynb
-hari_df = pd.read_csv("cleaned_hari_data.csv")
-jam_df = pd.read_csv("cleaned_jam_data.csv")
+hari_df = pd.read_csv("dashboard/cleaned_hari_data.csv")
+jam_df = pd.read_csv("dashboard/cleaned_jam_data.csv")
 
 # Konversi tipe data tanggal
 hari_df['dteday'] = pd.to_datetime(hari_df['dteday'])
@@ -16,7 +16,7 @@ jam_df['dteday'] = pd.to_datetime(jam_df['dteday'])
 
 # Sidebar untuk filter tambahan
 with st.sidebar:
-    st.image('rental_sepeda.jpeg', use_container_width=True)
+    st.image('dashboard/rental_sepeda.jpeg', use_container_width=True)
     st.subheader("📅 **Filter Data**")
 
     # Filter Rentang Waktu dengan Try-Excep
